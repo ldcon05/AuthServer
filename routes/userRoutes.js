@@ -4,8 +4,8 @@ import { login, register } from '../controllers/userController';
 
 const app = Router();
 
-app.use('login', login);
-app.use('register', register);
+app.post('/login', login);
+app.post('/register', register);
 
 
 export default app;

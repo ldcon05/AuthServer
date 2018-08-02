@@ -2,7 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import bcrypt from 'bcrypt';
 
 import {bcryptSaltRounds} from '../config';
-import generateToken from '../helpers/auth';
+import generateToken from '../services/auth';
 
 const userSchema = new Schema({
   name: {
@@ -23,8 +23,7 @@ const userSchema = new Schema({
     required: true
   },
   authorization: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
